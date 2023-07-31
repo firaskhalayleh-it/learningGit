@@ -240,3 +240,6 @@ secrets.txt
 
 Files matching `*.log`, the `build/` directory, and `secrets.txt` will be ignored by Git.
 
+# exersises : 
+i did the exercise on terminal also build this repo form terminal 
+
