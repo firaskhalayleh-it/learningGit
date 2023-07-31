@@ -159,3 +159,84 @@ In this collaborative workflow, users work independently on their respective bra
 
 These quick wins illustrate some of the key strengths and advantages of using Git as a version control system. Embracing Git's principles and features can lead to more efficient and collaborative software development processes.
 
+
+**Git Tutorial - Getting Started:**
+
+1. **git init:** The command `git init` creates a new Git repository in the current directory. It initializes the necessary `.git` directory to track changes and versions of your project.
+
+2. **--bare option:** Adding the `--bare` option to `git init` creates a centralized repository without a working directory. It's typically used as a remote repository to share code among developers. For example:
+   ```
+   git init --bare central_repo.git
+   ```
+
+**Template:**
+
+Git allows you to use a custom template when creating a new repository with `git init`. The template can include files, scripts, and configurations that you want to be present in every new repository. For example:
+```
+git init --template=/path/to/custom_template
+```
+
+**Configure:**
+
+The `git config` command is used to set configuration options for Git. There are three levels of configuration:
+1. **Local:** Specific to the current repository. Use `git config` without any `--global` or `--system` flags to set local configurations.
+2. **Global:** Applies to the current user across all repositories. Use `git config --global` to set global configurations.
+3. **System:** Applies to the entire system. Requires administrator/root privileges. Use `git config --system` to set system configurations.
+
+For example, setting the username globally:
+```
+git config --global user.name "Your Name"
+```
+
+**Alias:**
+
+Git allows you to create aliases for commonly used commands to save time and typing. You can define aliases in your Git configuration to create shortcuts. For example:
+```
+git config --global alias.st status
+```
+Now, you can use `git st` instead of `git status`.
+
+**git add:**
+
+The `git add` command adds file changes to the staging area, preparing them to be included in the next commit. For example, to add all changes to the staging area:
+```
+git add .
+```
+
+**git commit:**
+
+The `git commit` command creates a new commit with the changes currently staged in the staging area. It allows you to provide a commit message describing the changes made. For example:
+```
+git commit -m "Implemented feature X"
+```
+
+**Amend:**
+
+`git commit --amend` allows you to modify the most recent commit. You can add more changes to the commit or modify the commit message. For example:
+```
+# Make additional changes
+git add file1 file2 ...
+git commit --amend
+```
+
+**git diff:**
+
+`git diff` compares changes between the working directory and the staging area or between two different commits. It helps you visualize the differences between files. For example:
+```
+git diff                 # Show changes between working directory and staging area
+git diff --staged        # Show changes between staging area and last commit
+git diff commit1 commit2 # Show changes between two commits
+```
+
+**git ignore:**
+
+The `.gitignore` file allows you to specify files or patterns that Git should ignore, preventing them from being tracked. This is useful for excluding temporary files, build artifacts, or sensitive information from version control. For example:
+```
+# .gitignore file content
+*.log
+build/
+secrets.txt
+```
+
+Files matching `*.log`, the `build/` directory, and `secrets.txt` will be ignored by Git.
+
