@@ -66,4 +66,9 @@ firas@firas-GL65-Leopard-10SCSR:~/Documents/git-katas$ cat greeting.txt
 firas@firas-GL65-Leopard-10SCSR:~/Documents/git-katas$ git push origin master
 ```
 
-Remember to replace `firas-GL65-Leopard-10SCSR` with your actual hostname. Additionally, ensure that you have the correct remote URL for the repository and appropriate access rights to push changes to the remote.
+## note:
+for sure i used the command 
+```bash
+git remote add origin https://github.com/firaskhalayleh-it/learningGit.git
+```
+then use the 11'th step
