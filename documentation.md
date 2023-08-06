@@ -95,4 +95,40 @@ firas@firas-GL65-Leopard-10SCSR:~/Documents/git-katas/ff-merge/exercise$ git sta
 firas@firas-GL65-Leopard-10SCSR:~/Documents/git-katas/ff-merge/exercise$ git log --oneline --graph --all
 ```
 
-Please replace `<commit_hash>` with the actual commit hash of the first commit with the message "A." Remember to follow the commands in order, and the "the-beginning" branch should be created starting from the desired commit.
+# third exercise : 
+```bash
+Certainly! Here's the entire sequence of commands in one code block:
+
+# Create a branch called greeting and switch to it
+git checkout -b greeting
+
+# Edit the greeting.txt file to contain your favorite greeting
+# (Modify greeting.txt with your favorite greeting)
+
+# Add greeting.txt to the staging area and commit
+git add greeting.txt
+git commit -m "Add greeting.txt"
+
+# Switch back to the master branch
+git checkout master
+
+# Create a file README.md with information about this repository
+echo "Git Juggling Repository" > README.md
+echo "This repository contains examples of lightweight branch juggling in Git." >> README.md
+
+# Add the README.md file to the staging area and commit
+git add README.md
+git commit -m "committing the readme.md"
+
+# View the Git log
+git log --oneline --graph --all
+
+# Diff the branches
+git diff master greeting
+
+# Merge the greeting branch into master
+git merge greeting
+
+# View the Git log again to see the extra merge commit
+git log --oneline --graph --all
+```
