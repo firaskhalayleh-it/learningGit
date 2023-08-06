@@ -132,3 +132,31 @@ git merge greeting
 # View the Git log again to see the extra merge commit
 git log --oneline --graph --all
 ```
+
+# fourth exercise : 
+```bash
+cd merge-mergesort/
+source setup.sh
+
+# Create a new branch 'Mergesort-Impl' and implement mergesort
+git checkout -b Mergesort-Impl
+# (Modify mergesort.py to implement mergesort)
+git add mergesort.py
+git commit -m "Mergesort implemented on feature branch"
+
+# Switch back to the master branch and make some changes
+git checkout master
+touch README.md
+echo "this repo is going to take some exercises in git" > README.md
+git commit -am "committing the readme.md"
+
+# Merge the 'Mergesort-Impl' branch into 'master' (conflict occurs)
+git merge Mergesort-Impl
+# (Resolve the merge conflict in mergesort.py)
+git add mergesort.py
+git commit -m "committing"
+
+# View the Git log with 'git lol' and status
+git lol
+git status
+```
